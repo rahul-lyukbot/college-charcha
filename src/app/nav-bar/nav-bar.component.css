@@ -3,8 +3,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #333;
-  color: #fff;
+  background-color: rgb(250, 249, 246, 0.8);
+  color: black;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .logo img {
@@ -23,8 +25,8 @@ li {
 
 a {
   text-decoration: none;
-  color: #fff;
   transition: color 0.3s ease;
+  color: black; /* Set the text color to black */
 }
 
 a:hover {

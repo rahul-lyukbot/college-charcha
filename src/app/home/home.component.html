@@ -1,22 +1,35 @@
 <div class="home" [style.backgroundImage]="background">
   <div class="button-section">
-    <button mat-raised-button color="warn" class="login-btn">Login</button>
-    <button mat-raised-button color="warn" class="signup-btn">Signup</button>
+    <button
+      mat-raised-button
+      color="warn"
+      class="login-btn"
+      (click)="showLoginForm()"
+    >
+      LOGIN
+    </button>
+    <button
+      mat-raised-button
+      color="warn"
+      class="signup-btn"
+      (click)="showSignupForm()"
+    >
+      SIGN UP
+    </button>
   </div>
   <div class="card-container">
-    <mat-card>
-      <mat-card-title class="card-title"
+    <mat-card *ngIf="!loginFormActive && !signupFormActive" class="search-card">
+      <mat-card-title class="search-card-title"
         >Welcome to College Charcha!!</mat-card-title
       >
-      <mat-card-subtitle class="card-sub-title"
+      <mat-card-subtitle class="search-card-sub-title"
         >Make your college search eaiser with us.</mat-card-subtitle
       >
       <mat-card-content>
-        <mat-form-field class="card-infa-pull-right search-container">
+        <div class="search-container">
           <input
-            matInput
             type="search"
-            placeholder="Search here"
+            placeholder="Search Colleges and Courses"
             class="search-input"
           />
           <button
@@ -25,10 +38,189 @@
             class="search-button"
             aria-label="Search"
           >
-            <mat-icon matPrefix>search</mat-icon>
+            Search
           </button>
-        </mat-form-field>
+        </div>
       </mat-card-content>
     </mat-card>
   </div>
+
+  <mat-card class="user-card-login" *ngIf="loginFormActive">
+    <div class="card-header">
+      <button mat-icon-button class="hideform-btn" (click)="hideForms()">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <mat-card-title class="card-title">College Charcha</mat-card-title>
+    <mat-card-subtitle class="card-subtitle"
+      >We Believe in making difference</mat-card-subtitle
+    >
+    <h1 class="card-heading">LOGIN</h1>
+    <p class="card-login-subheading">Enter your credential to connect</p>
+
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <div class="login-grid">
+          <mat-form-field>
+            <input
+              matInput
+              formControlName="username"
+              placeholder="Email or Phone"
+            />
+          </mat-form-field>
+
+          <mat-form-field>
+            <input
+              matInput
+              formControlName="password"
+              type="password"
+              placeholder="Password"
+            />
+          </mat-form-field>
+
+          <button
+            mat-raised-button
+            color="warn"
+            class="login-submit-btn"
+            type="submit"
+          >
+            LOGIN
+          </button>
+        </div>
+      </form>
+      <span class="bottom-text-login"
+        >Don't have account?
+        <button mat-button (click)="showSignupForm()">Sign UP!</button></span
+      >
+      <div class="separator-container">
+        <hr class="separator" />
+        <div class="separator-text">OR</div>
+      </div>
+
+      <div class="login-bottom-btn-section">
+        <button mat-raised-button color="warn" class="google-login">
+          <img
+            src="assets/img/google.png"
+            alt="Google Logo"
+            class="button-icon"
+          />
+          | Google
+        </button>
+        <button mat-raised-button color="primary" class="facebook-login">
+          <img
+            src="assets/img/facebook.png"
+            alt="Facebook Logo"
+            class="button-icon"
+          />
+          | Facebook
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+  <!-- Signup Card -->
+  <mat-card class="user-card-signup" *ngIf="signupFormActive">
+    <button mat-icon-button class="hideform-btn" (click)="hideForms()">
+      <i class="fas fa-times"></i>
+    </button>
+    <mat-card-title class="card-title">College Charcha</mat-card-title>
+    <mat-card-subtitle class="card-subtitle"
+      >We Believe in making difference</mat-card-subtitle
+    >
+    <h1 class="card-heading">SIGN UP</h1>
+    <p class="card-signup-subheading">
+      Please fill the details and create account
+    </p>
+
+    <mat-card-content>
+      <form [formGroup]="signupForm" (ngSubmit)="signup()">
+        <div class="grid-container">
+          <!-- First Column -->
+          <div fxLayout="column">
+            <mat-form-field>
+              <input
+                matInput
+                formControlName="firstName"
+                placeholder="First Name"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                formControlName="email"
+                type="email"
+                placeholder="Email"
+              />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                formControlName="courses"
+                placeholder="Courses you want to pursue"
+              />
+            </mat-form-field>
+          </div>
+
+          <!-- Second Column -->
+          <div fxLayout="column">
+            <mat-form-field>
+              <input matInput formControlName="lastName" placeholder="Title" />
+            </mat-form-field>
+            <mat-form-field>
+              <input
+                matInput
+                formControlName="phoneNumber"
+                placeholder="Phone Number"
+              />
+            </mat-form-field>
+
+            <mat-form-field>
+              <input
+                matInput
+                formControlName="password"
+                type="password"
+                placeholder="Password"
+              />
+            </mat-form-field>
+          </div>
+        </div>
+
+        <button
+          mat-raised-button
+          color="warn"
+          class="signup-submit-btn"
+          type="submit"
+        >
+          SIGN UP
+        </button>
+      </form>
+      <span class="bottom-text"
+        >Already have account?
+        <button mat-button (click)="showLoginForm()">Login!</button></span
+      >
+      <div class="separator-container">
+        <hr class="separator" />
+        <div class="separator-text">OR</div>
+      </div>
+
+      <div class="bottom-btn-section">
+        <button mat-raised-button color="warn" class="google-login">
+          <img
+            src="assets/img/google.png"
+            alt="Google Logo"
+            class="button-icon"
+          />
+          | Google
+        </button>
+        <button mat-raised-button color="primary" class="facebook-login">
+          <img
+            src="assets/img/facebook.png"
+            alt="Facebook Logo"
+            class="button-icon"
+          />
+          | Facebook
+        </button>
+      </div>
+    </mat-card-content>
+  </mat-card>
 </div>

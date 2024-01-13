@@ -27,54 +27,165 @@
   background: transparent;
 }
 
-mat-card {
+.search-card {
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 8px;
 }
 
-mat-card-title {
+.search-card-title {
   padding-left: 30%;
   padding-top: 4%;
   color: rgba(255, 255, 255, 0.8);
 }
 
-mat-card-subtitle {
+.search-card-sub-title {
   padding-left: 30%;
   color: rgba(255, 255, 255, 0.8);
 }
 
-mat-form-field {
-  margin-left: 12%;
-  margin-top: 4%;
-  width: 70%;
-  border-radius: 20px;
-}
-
-/* Add this style to your global styles or in the component's CSS file */
-
 .search-container {
-  border-radius: 20px;
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 14px;
   overflow: hidden;
-  background-color: #fff; /* Set the background color of the search bar */
+  max-width: 84%; /* Adjust the maximum width as needed */
+  margin-bottom: 4%;
+  margin-top: 2%;
+  margin-left: 8%;
 }
 
 .search-input {
   flex: 1;
   border: none;
-  border-radius: 20px 0 0 20px;
-  padding: 10px; /* Adjust padding as needed */
+  padding: 10px;
 }
 
 .search-button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
   border: none;
-  border-radius: 0 20px 20px 0;
-  position: absolute;
-  right: 0;
-  top: 0;
+  cursor: pointer;
 }
 
-/* Optional: Style the input and button on focus or hover */
-.search-input:focus,
+.hideform-btn {
+  margin-left: 90%;
+  color: rgba(0, 0, 0, 0.6);
+}
+
 .search-button:hover {
   background-color: #45a049;
+}
+
+.card-title {
+  color: red;
+  margin-left: 40%;
+}
+
+.card-subtitle {
+  margin-left: 36%;
+}
+
+.user-card-login {
+  position: absolute;
+  width: 34%;
+  top: 22%;
+  right: 32%;
+}
+.user-card-signup {
+  position: absolute;
+  width: 50%;
+  top: 12%;
+  right: 24%;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
+  gap: 10px; /* Gap between grid items */
+}
+.signup-submit-btn {
+  margin-left: 40%;
+  margin-bottom: 2%;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+}
+
+.login-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* One column */
+  grid-template-rows: repeat(2, auto); /* Two rows */
+  gap: 10px; /* Adjust the gap between rows if needed */
+}
+
+.login-submit-btn {
+  margin-left: 38%;
+  margin-bottom: 2%;
+  border-radius: 20px;
+  width: 150px;
+  height: 40px;
+}
+
+.bottom-text {
+  margin-left: 40%;
+}
+
+.separator-container {
+  position: relative;
+}
+
+.separator {
+  border-top: 1px solid #ccc; /* Adjust the border style and color as needed */
+  margin: 20px 0; /* Adjust the margin as needed */
+}
+
+.separator-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 0 10px;
+  color: #555;
+}
+
+.card-heading {
+  margin-left: 44%;
+}
+
+.card-signup-subheading {
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 34%;
+}
+.card-login-subheading {
+  color: rgba(0, 0, 0, 0.6);
+  margin-left: 38%;
+}
+
+.bottom-btn-section {
+  margin-left: 32%;
+}
+.google-login {
+  border-radius: 20px;
+  margin-right: 6%;
+}
+
+.facebook-login {
+  border-radius: 20px;
+}
+
+.button-icon {
+  max-width: 20px;
+  max-height: 20px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.login-bottom-btn-section {
+  margin-left: 24%;
+}
+
+.bottom-text-login {
+  margin-left: 34%;
 }
