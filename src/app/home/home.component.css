@@ -86,6 +86,15 @@
   margin-left: 36%;
 }
 
+.card-title-login {
+  color: red;
+  margin-left: 36%;
+}
+
+.card-subtitle-login {
+  margin-left: 32%;
+}
+
 .user-card-login {
   position: absolute;
   width: 34%;
@@ -153,6 +162,9 @@
 .card-heading {
   margin-left: 44%;
 }
+.card-heading-login {
+  margin-left: 42%;
+}
 
 .card-signup-subheading {
   color: rgba(0, 0, 0, 0.6);
@@ -160,7 +172,7 @@
 }
 .card-login-subheading {
   color: rgba(0, 0, 0, 0.6);
-  margin-left: 38%;
+  margin-left: 32%;
 }
 
 .bottom-btn-section {
