@@ -1,1 +1,62 @@
-<p>contact-us works!</p>
+<div class="main-container">
+  <div class="header-text">
+    <h1>CONTACT US</h1>
+
+    <p>
+      Thank you for your interest in our services. If you have any questions or
+      concerns, please feel free to contact us. WE ARE HERE TO HELP.
+    </p>
+  </div>
+
+  <div class="contact-container">
+    <form (ngSubmit)="submitForm()" [formGroup]="contactForm">
+      <div class="contact-grid1">
+        <mat-form-field appearance="fill">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Last Name</mat-label>
+          <input matInput formControlName="lastName" required />
+        </mat-form-field>
+      </div>
+
+      <mat-form-field class="email-field" appearance="fill">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" required />
+      </mat-form-field>
+      <div class="contact-grid2">
+        <mat-form-field appearance="fill">
+          <mat-label>Phone Number</mat-label>
+          <input matInput formControlName="phoneNumber" required />
+        </mat-form-field>
+
+        <mat-form-field appearance="fill">
+          <mat-label>Course</mat-label>
+          <input matInput formControlName="course" required />
+        </mat-form-field>
+      </div>
+
+      <mat-form-field class="comment-field" appearance="fill">
+        <mat-label>Comments</mat-label>
+        <textarea matInput formControlName="comments" required></textarea>
+      </mat-form-field>
+
+      <button
+        class="submit-btn"
+        mat-raised-button
+        color="warn"
+        type="submit"
+        [disabled]="!contactForm.valid"
+      >
+        Submit
+      </button>
+    </form>
+
+    <!-- Image -->
+    <div class="educational-image-container">
+      <img src="assets/img/edu.svg" alt="Educational Image" />
+    </div>
+  </div>
+</div>

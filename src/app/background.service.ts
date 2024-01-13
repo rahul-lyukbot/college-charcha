@@ -9,7 +9,7 @@ export class BackgroundService {
   private backgroundImages: string[] = [
     'url("/assets/img/background1.jpg")',
     'url("/assets/img/background2.jpg")',
-    // Add more image URLs as needed
+    'url("/assets/img/background3.jpg")',
   ];
 
   private currentBackgroundIndex: number = 0;

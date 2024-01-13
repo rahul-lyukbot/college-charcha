@@ -1,0 +1,83 @@
+.main-container {
+  border-radius: 10px;
+  background-color: white;
+  width: 70%;
+  margin-left: 14%;
+  margin-top: 2%;
+}
+
+.header-text {
+  text-align: center;
+}
+
+.header-text h1 {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+}
+
+.header-text h1::after {
+  content: ""; /* Add content to the pseudo-element */
+  display: block; /* Make the pseudo-element a block-level element */
+  height: 4px; /* Set the height of the red line */
+  width: 100%; /* Make the red line span the entire width of the h1 element */
+  background-color: red; /* Set the background color to red */
+  position: absolute; /* Position the pseudo-element relative to its containing block */
+  bottom: 0; /* Position the pseudo-element at the bottom of the h1 element */
+  left: 0; /* Align the pseudo-element with the left edge of the h1 element */
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  border-radius: 10px;
+  background-color: white;
+  padding-left: 4%;
+  padding-right: 4%;
+  padding-top: 4%;
+}
+
+.container-header {
+  margin-bottom: 20px; /* Adjust spacing between the header and the form */
+}
+
+.container-header h2 {
+  font-size: 24px; /* Adjust the font size as needed */
+}
+
+.container-header p {
+  font-size: 16px; /* Adjust the font size as needed */
+}
+
+/* Add any additional styling for the form and image container as needed */
+
+.contact-grid1 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.contact-grid2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+.email-field {
+  width: 100%;
+}
+.comment-field {
+  width: 100%;
+  height: 40%;
+}
+.submit-btn {
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 20px;
+  margin-left: 36%;
+}
+.educational-image-container img {
+  width: 100%;
+  height: auto;
+}
