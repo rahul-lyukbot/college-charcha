@@ -1,0 +1,30 @@
+.main-container {
+  border-radius: 10px;
+  background-color: white;
+  width: 70%;
+  height: 60%;
+  margin-left: 14%;
+  margin-top: 2%;
+}
+
+.header-text {
+  text-align: start;
+  margin-left: 10%;
+}
+
+.header-text h1 {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+}
+
+.header-text h1::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}

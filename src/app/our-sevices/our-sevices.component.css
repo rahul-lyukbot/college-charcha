@@ -1,0 +1,52 @@
+.main-container {
+  border-radius: 10px;
+  background-color: white;
+  width: 70%;
+  height: 50%;
+  margin-left: 14%;
+  margin-top: 4px;
+}
+
+.header-text {
+  text-align: start;
+  margin-left: 10%;
+}
+
+.header-text h1 {
+  display: inline-block;
+  position: relative;
+  font-weight: bold;
+}
+
+.header-text h1::after {
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Two columns with equal width */
+  gap: 10px;
+}
+
+.card-heading {
+  color: red;
+  margin-left: 20%;
+}
+.card-text {
+  width: 60%;
+  margin-left: 20%;
+}
+
+.card-button {
+  margin-left: 40%;
+  border-radius: 20px;
+  padding-left: 10%;
+  padding-right: 10%;
+}

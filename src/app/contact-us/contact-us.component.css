@@ -17,14 +17,14 @@
 }
 
 .header-text h1::after {
-  content: ""; /* Add content to the pseudo-element */
-  display: block; /* Make the pseudo-element a block-level element */
-  height: 4px; /* Set the height of the red line */
-  width: 100%; /* Make the red line span the entire width of the h1 element */
-  background-color: red; /* Set the background color to red */
-  position: absolute; /* Position the pseudo-element relative to its containing block */
-  bottom: 0; /* Position the pseudo-element at the bottom of the h1 element */
-  left: 0; /* Align the pseudo-element with the left edge of the h1 element */
+  content: "";
+  display: block;
+  height: 4px;
+  width: 100%;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 0;
 }
 
 .contact-container {
