@@ -3,7 +3,7 @@
   height: 100vh;
   background-size: cover;
   background-position: center;
-  transition: background-image 1s ease-in-out; /* Add a smooth transition effect */
+  transition: background-image 1s ease-in-out; /* for smooth transition effect */
 }
 
 .button-section {
@@ -48,7 +48,7 @@
   border: 1px solid #ccc;
   border-radius: 14px;
   overflow: hidden;
-  max-width: 84%; /* Adjust the maximum width as needed */
+  max-width: 84%;
   margin-bottom: 4%;
   margin-top: 2%;
   margin-left: 8%;
@@ -110,8 +110,8 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns with equal width */
-  gap: 10px; /* Gap between grid items */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
 }
 .signup-submit-btn {
   margin-left: 40%;
@@ -123,9 +123,9 @@
 
 .login-grid {
   display: grid;
-  grid-template-columns: 1fr; /* One column */
-  grid-template-rows: repeat(2, auto); /* Two rows */
-  gap: 10px; /* Adjust the gap between rows if needed */
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, auto);
+  gap: 10px;
 }
 
 .login-submit-btn {
@@ -145,8 +145,8 @@
 }
 
 .separator {
-  border-top: 1px solid #ccc; /* Adjust the border style and color as needed */
-  margin: 20px 0; /* Adjust the margin as needed */
+  border-top: 1px solid #ccc;
+  margin: 20px 0;
 }
 
 .separator-text {

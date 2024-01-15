@@ -1,0 +1,37 @@
+.college-list {
+  background-color: white;
+  width: 88%;
+  margin-left: 6%;
+  margin-top: 2%;
+}
+
+.clg-heading {
+  color: red;
+  margin-left: 8%;
+  weight: bold;
+}
+
+.search-container {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 14px;
+  overflow: hidden;
+  max-width: 84%;
+  margin-top: 2%;
+  margin-left: 8%;
+  margin-bottom: 1%;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  padding: 10px;
+}
+
+.search-button {
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}

@@ -39,18 +39,16 @@
 }
 
 .container-header {
-  margin-bottom: 20px; /* Adjust spacing between the header and the form */
+  margin-bottom: 20px;
 }
 
 .container-header h2 {
-  font-size: 24px; /* Adjust the font size as needed */
+  font-size: 24px;
 }
 
 .container-header p {
-  font-size: 16px; /* Adjust the font size as needed */
+  font-size: 16px;
 }
-
-/* Add any additional styling for the form and image container as needed */
 
 .contact-grid1 {
   display: grid;

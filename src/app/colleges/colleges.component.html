@@ -1,1 +1,47 @@
-<p>colleges works!</p>
+<div class="college-list">
+  <div class="heading-area">
+    <h1 class="clg-heading">Colleges</h1>
+    <div class="search-container">
+      <input
+        type="search"
+        placeholder="Search Colleges and Courses"
+        class="search-input"
+      />
+      <button
+        mat-raised-button
+        color="warn"
+        class="search-button"
+        aria-label="Search"
+      >
+        Search
+      </button>
+    </div>
+  </div>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <!-- Serial Number Column -->
+    <ng-container matColumnDef="serialNumber">
+      <th mat-header-cell *matHeaderCellDef>S.No</th>
+      <td mat-cell *matCellDef="let college">{{ college.serialNumber }}</td>
+    </ng-container>
+
+    <!-- Course Name Column -->
+    <ng-container matColumnDef="courseName">
+      <th mat-header-cell *matHeaderCellDef>Location</th>
+      <td mat-cell *matCellDef="let college">{{ college.courseName }}</td>
+    </ng-container>
+
+    <!-- College Name Column -->
+    <ng-container matColumnDef="collegeName">
+      <th mat-header-cell *matHeaderCellDef>College Name</th>
+      <td mat-cell *matCellDef="let college">{{ college.collegeName }}</td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+  </table>
+
+  <mat-paginator
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+  ></mat-paginator>
+</div>
